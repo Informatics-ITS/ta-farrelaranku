@@ -1,9 +1,13 @@
 # Adaptive Cyclic Learning Rate untuk Prediksi Deret Waktu Jangka Panjang pada Model Deep Learning Berarsitektur Encoder-Decoder dan Encoder-Only
 
 **Nama Mahasiswa**: Farrela Ranku Mahhisa
+
 **NRP**: 5025211129 
+
 **Judul TA**: Adaptive Cyclic Learning Rate untuk Prediksi Deret Waktu Jangka Panjang pada Model Deep Learning Berarsitektur Encoder-Decoder dan Encoder-Only  
+
 **Dosen Pembimbing**: Ir. Ary Mazharuddin Shiddiqi, S.Kom., M.Comp.Sc., Ph.D., IPM.  
+
 **Dosen Ko-pembimbing**: Ratih Nur Esti Anggraini, S.Kom., M.Sc., Ph.D.
 
 ## 🧠 What is Adaptive Cyclic Learning Rate (ACLR)?
