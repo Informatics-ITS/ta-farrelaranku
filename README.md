@@ -1,75 +1,67 @@
-# 🏁 Tugas Akhir (TA) - Final Project
+# Adaptive Cyclic Learning Rate untuk Prediksi Deret Waktu Jangka Panjang pada Model Deep Learning Berarsitektur Encoder-Decoder dan Encoder-Only
 
-**Nama Mahasiswa**: [Nama Lengkap]  
-**NRP**: [Nomor Registrasi Pokok]  
-**Judul TA**: [Judul Tugas Akhir]  
-**Dosen Pembimbing**: [Nama Dosen]  
-**Dosen Ko-pembimbing**: [Nama Dosen]
+**Nama Mahasiswa**: Farrela Ranku Mahhisa
+
+**NRP**: 5025211129 
+
+**Judul TA**: Adaptive Cyclic Learning Rate untuk Prediksi Deret Waktu Jangka Panjang pada Model Deep Learning Berarsitektur Encoder-Decoder dan Encoder-Only  
+
+**Dosen Pembimbing**: Ir. Ary Mazharuddin Shiddiqi, S.Kom., M.Comp.Sc., Ph.D., IPM.  
+
+**Dosen Ko-pembimbing**: Ratih Nur Esti Anggraini, S.Kom., M.Sc., Ph.D.
+
+## 🧠 What is Adaptive Cyclic Learning Rate (ACLR)?
+
+**ACLR** adalah strategi optimasi yang secara adaptif mengatur *learning rate* selama pelatihan model berdasarkan perubahan loss. Konsep utamanya adalah:  
+- Saat loss menurun, maka **step size diperbesar**, menyebabkan *learning rate* berfluktuasi lebih tinggi agar proses eksplorasi parameter tetap dinamis.  
+- Saat loss mulai membesar atau stagnan, maka **step size diperkecil**, membuat *learning rate* menurun lebih lambat untuk menstabilkan pembelajaran.
 
 ---
 
 ## 📺 Demo Aplikasi  
 Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):  
 
-[![Demo Aplikasi](https://i.ytimg.com/vi/zIfRMTxRaIs/maxresdefault.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)  
+[![Demo Aplikasi](https://i.ytimg.com/vi/Blz1arDNuZw/maxresdefault.jpg)](https://www.youtube.com/watch?v=Blz1arDNuZw)  
 *Klik gambar di atas untuk menonton demo*
 
----
+## 📁 Folder Structure
 
-*Konten selanjutnya hanya merupakan contoh awalan yang baik. Anda dapat berimprovisasi bila diperlukan.*
+### `Encoder-Decoder/`
+Berisi implementasi dan eksperimen model **Transformer** dan **Informer** yang menggunakan arsitektur encoder-decoder.  
 
-## 🛠 Panduan Instalasi & Menjalankan Software  
+### `FRNet+PatchTST/`
+Berisi dua model:
 
-### Prasyarat  
-- Daftar dependensi (contoh):
-  - Python 3.10+
-  - Node.js v18+
-  - MySQL 8.0
-  - [Lainnya...]
+**FRNet** dan **PatchTST**.
 
-### Langkah-langkah  
-1. **Clone Repository**  
-   ```bash
-   git clone https://github.com/Informatics-ITS/TA.git
-   ```
-2. **Instalasi Dependensi**
-   ```bash
-   cd [folder-proyek]
-   pip install -r requirements.txt  # Contoh untuk Python
-   npm install  # Contoh untuk Node.js
-   ```
-3. **Konfigurasi**
-- Salin/rename file .env.example menjadi .env
-- Isi variabel lingkungan sesuai kebutuhan (database, API key, dll.)
-4. **Jalankan Aplikasi**
-   ```bash
-   python main.py  # Contoh untuk Python
-   npm start      # Contoh untuk Node.js
-   ```
-5. Buka browser dan kunjungi: `http://localhost:3000` (sesuaikan dengan port proyek Anda)
+
+### `iTransformer/`
+Berisi implementasi dari **iTransformer**.
 
 ---
 
-## 📚 Dokumentasi Tambahan
 
-- [![Dokumentasi API]](docs/api.md)
-- [![Diagram Arsitektur]](docs/architecture.png)
-- [![Struktur Basis Data]](docs/database_schema.sql)
+## 🔬 Research Context
 
----
+This project is a continuation of my thesis titled:
 
-## ✅ Validasi
+> **Adaptive Cyclic Learning Rate untuk Prediksi Deret Waktu Jangka Panjang pada Model Deep Learning Berarsitekur Encoder-Decoder dan Encoder-Only**
 
-Pastikan proyek memenuhi kriteria berikut sebelum submit:
-- Source code dapat di-build/run tanpa error
-- Video demo jelas menampilkan fitur utama
-- README lengkap dan terupdate
-- Tidak ada data sensitif (password, API key) yang ter-expose
+The research focuses on evaluating the role of ACLR in improving long-term forecasting accuracy across various deep learning architectures.
 
 ---
 
-## ⁉️ Pertanyaan?
+## 📊 Evaluation Metrics
 
-Hubungi:
-- Penulis: [email@mahasiswa]
-- Pembimbing Utama: [email@pembimbing]
+Setiap model diuji menggunakan metrik:
+- **MSE (Mean Squared Error)**
+- **MAE (Mean Absolute Error)**
+
+---
+
+## 📌 Notes
+
+- Model dieksekusi menggunakan batch size besar untuk memastikan siklus ACLR berjalan stabil.
+- Seluruh eksperimen menggunakan tiga dataset publik: Weather, Electricity, dan Exchange Rate.
+
+---
